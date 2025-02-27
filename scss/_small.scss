@@ -1,0 +1,275 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $defaultFont;
+  font-weight: $lightWeight;
+  min-width: 320px;
+  background-color: $backgroundColor;
+  color: $textColor;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#headerWrapper {
+  border-bottom: 1px solid $borderColor;
+  background-color: $headerBgColor; // Neutral color instead of red
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem $gutter;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: $boldWeight;
+    color: $primaryColor;
+  }
+}
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+nav {
+  background: $primaryColor;
+  position: relative;
+
+  #myButton {
+    border: none;
+    background: none;
+    color: $navTextColor;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    font-weight: $lightWeight;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+
+    &::before {
+      content: "\2630"; // Hamburger menu
+      transition: content 0.3s ease;
+    }
+
+    &.open::before {
+      content: "✖"; // Close button
+    }
+  }
+
+  ul.menuLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: lighten($primaryColor, 10%);
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    li {
+      border-bottom: 1px solid darken($primaryColor, 10%);
+
+      a {
+        color: $navTextColor;
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        text-align: center;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: darken($primaryColor, 10%);
+        }
+      }
+    }
+
+    &.open {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem $gutter;
+
+    #myButton {
+      display: none; // Hide hamburger menu on larger screens
+    }
+
+    ul.menuLinks {
+      display: flex;
+      position: static;
+      width: auto;
+      background: transparent;
+      box-shadow: none;
+
+      li {
+        border: none;
+        margin: 0 1rem;
+
+        a {
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          color: $navTextColor;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================
+   MAIN CONTENT
+   ========================================================== */
+main {
+  h1 {
+    padding: 1rem $gutter 0.5rem;
+    font-size: 1.5rem;
+    color: $textColor;
+    font-weight: $lightWeight;
+  }
+
+  p {
+    padding: 0.5rem $gutter;
+    color: $textColor;
+    line-height: $leading;
+  }
+}
+
+/* ==========================================================
+   CARD SECTIONS
+   ========================================================== */
+div.allcards {
+  padding: 0 $gutter;
+
+  section {
+    border: 1px solid $cardBorderColor;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+
+    h2,
+    p {
+      margin: 0;
+      padding: 1rem $gutter;
+    }
+
+    h2 {
+      background-color: $cardHeaderBgColor;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    img.e2e {
+      padding: 0;
+    }
+
+    p {
+      font-style: italic;
+    }
+
+    a {
+      display: block;
+      background-color: $buttonBgColor;
+      padding: 0.75rem;
+      text-align: center;
+      margin: 0 3rem 1rem;
+      border-radius: 8px;
+      color: $buttonTextColor;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        background-color: darken($buttonBgColor, 10%);
+      }
+    }
+  }
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+#footerWrapper {
+  background-color: $footerBgColor;
+  color: $footerTextColor;
+}
+
+footer {
+  padding: 1rem $gutter;
+  text-align: center;
+
+  section.contact {
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem;
+    }
+
+    ion-icon {
+      color: $iconColor;
+      padding-right: 5px;
+    }
+  }
+
+  section.social {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 1px $socialBorderColor;
+      font-size: 2rem;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      color: $socialIconColor;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $socialHoverColor;
+      }
+    }
+  }
+
+  section.location {
+    font-size: 1.5rem;
+  }
+
+  p.legal {
+    margin: 0;
+    font-weight: $lightWeight;
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Navigation Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/styles.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="headerWrapper">
+      <header>
+        <div class="logo">
+          <img
+            src="images/logo1x.png"
+            alt="site logo"
+            width="45"
+            s
+            height="50"
+            srcset="
+              images/logo1x.png 1x,
+              images/logo2x.png 2x,
+              images/logo3x.png 3x
+            "
+          />
+        </div>
+        <span>Principles of Web Languages</span>
+      </header>
+    </div>
+    <!-- end header wrapper -->
+
+    <div id="navWrapper">
+      <nav>
+        <button id="myButton"></button>
+        <ul class="menuLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li class="active"><a href="#">Learn</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+      <main>
+        <h1>Learn</h1>
+        <div class="allcards">
+          <section>
+            <h2>HTML</h2>
+            <img src="images/html.webp" alt="html" width="300" height="175" />
+            <p>
+              HTML stands for Hyper Text Markup Language. HTML is the standard
+              markup language for creating webpages.
+            </p>
+            <a href="#">Learn More</a>
+          </section>
+
+          <section>
+            <h2>CSS</h2>
+            <img
+              src="images/css.webp"
+              alt="css"
+              width="300"
+              height="175"
+              class="e2e"
+            />
+            <p>
+              CSS stands for Cascading Style Sheets. It describes how HTML
+              elements are to be displayed on screen, paper, or in other media.
+            </p>
+            <a href="#">Learn More</a>
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <img
+              src="images/javascript.webp"
+              alt="javascript"
+              width="300"
+              height="175"
+              class="e2e"
+            />
+            <p>
+              JavaScript is a scripting or programming language that allows you
+              to implement complex features on web pages.
+            </p>
+            <a href="#">Learn More</a>
+          </section>
+
+          <section>
+            <h2>Responsive Design</h2>
+            <img
+              src="images/responsive.webp"
+              alt="responsive design"
+              width="300"
+              height="175"
+              class="e2e"
+            />
+            <p>
+              Responsive Web Design is the approach that suggests that design
+              and development should respond to the user's behavior and
+              environment based on screen size, platform and orientation.
+            </p>
+            <a href="#">Learn More</a>
+          </section>
+
+          <section>
+            <h2>SASS</h2>
+            <img src="images/sass.webp" alt="SASS" width="300" height="175" />
+            <p>
+              SASS lets you use features that do not exist in CSS, like
+              variables, nested rules, mixins, import, inheritence, built-in
+              functions, and other stuff.
+            </p>
+            <a href="#">Learn More</a>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- end main wrapper -->
+
+    <div id="footerWrapper">
+      <footer>
+        <div>
+          <section class="contact">
+            <p><ion-icon name="person-outline"></ion-icon>Tim Berners-Lee</p>
+            <p><ion-icon name="home-outline"></ion-icon>CERN, LLC</p>
+            <p>
+              <ion-icon name="mail-outline"></ion-icon
+              ><a href="mailto:tim@cern.com">tim@cern.com</a>
+            </p>
+            <p>
+              <ion-icon name="globe-outline"></ion-icon
+              ><a href="https://cern.com">cern.com</a>
+            </p>
+            <p>
+              <ion-icon name="call-outline"></ion-icon
+              ><a href="tel:41227678484">41 22 767 84 84</a>
+            </p>
+          </section>
+          <section class="social">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+          </section>
+          <section class="location">
+            <address>
+              Espl. des Particules 1 <br />
+              1211 Meyrin <br />
+              Switzerland
+            </address>
+          </section>
+        </div>
+        <p class="legal">
+          &copy; <span id="year">inject</span> &bull; Ashton Osazuwa
+        </p>
+      </footer>
+    </div>
+    <!-- end footer wrapper -->
+    <script src="js/scripts.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
