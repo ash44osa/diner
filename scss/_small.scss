@@ -27,13 +27,11 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem $gutter;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 10px;
+  padding: 0 1rem;
 
   span {
-    font-size: 1rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #f0d8c3;
   }
