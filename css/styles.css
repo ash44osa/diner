@@ -338,7 +338,7 @@ header {
   margin: 0 auto;
 }
 header .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #b0323a;
 }
@@ -426,20 +426,10 @@ nav ul.menuLinks.open {
   nav ul.menuLinks li a {
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    color: #ffffff;
   }
   nav ul.menuLinks li a:hover {
     background: rgba(255, 255, 255, 0.2);
-  }
-}
-/* Smooth fade-in effect */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 /* ==========================================================
@@ -448,7 +438,7 @@ nav ul.menuLinks.open {
 main h1 {
   padding: 1rem 10px 0.5rem;
   font-size: 1.5rem;
-  color: #f0d8c3;
+  color: #283537;
   font-weight: 300;
 }
 main p {
@@ -542,6 +532,7 @@ footer section.social a {
   width: 44px;
   height: 44px;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 footer section.social a:hover {
   background-color: #b0323a;
