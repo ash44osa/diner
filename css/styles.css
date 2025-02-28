@@ -332,13 +332,15 @@ body {
 header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 1rem;
+  padding: 2rem 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 header span {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: bold;
   color: #f0d8c3;
+  padding: 1rem 10px;
 }
 
 /* ==========================================================
@@ -422,12 +424,18 @@ nav ul.menuLinks.open {
     margin: 0 1rem;
   }
   nav ul.menuLinks li a {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: #ffffff;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s, background 0.3s;
   }
-  nav ul.menuLinks li a:hover {
-    background: rgba(255, 255, 255, 0.2);
+  nav ul.menuLinks li.active a {
+    color: #fff;
+    background-color: #88272d;
+    border-radius: 5px;
+  }
+  nav ul.menuLinks li:hover a {
+    color: white;
   }
 }
 /* ==========================================================
@@ -513,6 +521,11 @@ footer section.contact ion-icon {
   color: #c87c0c;
   padding-right: 5px;
 }
+footer section.contact a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
 footer section.social {
   display: flex;
   justify-content: center;
@@ -525,7 +538,7 @@ footer section.social a {
   font-size: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  color: #ffffff;
+  color: inherit;
   border-radius: 50%;
   width: 44px;
   height: 44px;

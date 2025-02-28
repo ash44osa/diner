@@ -27,13 +27,15 @@ body {
 header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 1rem;
+  padding: 2rem $gutter;
+  max-width: 1200px;
+  margin: 0 auto;
 
   span {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: bold;
     color: #f0d8c3;
+    padding: 1rem $gutter;
   }
 }
 /* ==========================================================
@@ -126,19 +128,25 @@ nav {
         margin: 0 1rem;
 
         a {
-          padding: 0.5rem 1rem;
-          border-radius: 5px;
-          color: $navTextColor;
+          text-decoration: none;
+          color: white;
+          padding: 10px 15px;
+          transition: color 0.3s, background 0.3s;
+        }
 
-          &:hover {
-            background: rgba(255, 255, 255, 0.2);
-          }
+        &.active a {
+          color: #fff;
+          background-color: darken($color: $primaryColor, $amount: 10%);
+          border-radius: 5px;
+        }
+
+        &:hover a {
+          color: white;
         }
       }
     }
   }
 }
-
 /* ==========================================================
    MAIN CONTENT
    ========================================================== */
@@ -235,6 +243,12 @@ footer {
       color: $iconColor;
       padding-right: 5px;
     }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
 
   section.social {
@@ -249,7 +263,7 @@ footer {
       font-size: 2rem;
       margin: 0.5rem;
       padding: 0.5rem;
-      color: $socialIconColor;
+      color: inherit;
       border-radius: 50%;
       width: 44px;
       height: 44px;
